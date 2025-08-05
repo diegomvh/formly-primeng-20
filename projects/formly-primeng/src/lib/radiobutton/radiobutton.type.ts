@@ -6,14 +6,14 @@ import { CommonModule } from '@angular/common';
 import { RadioButtonModule } from 'primeng/radiobutton';
 import { FormlySelectModule } from '@ngx-formly/core/select';
 
-type RadioProps = FormlyFieldProps;
+type RadioButtonProps = FormlyFieldProps;
 
-export interface FormlyRadioFieldConfig extends FormlyFieldConfig<RadioProps> {
-  type: 'radio' | Type<FormlyFieldRadio>;
+export interface FormlyRadioButtonFieldConfig extends FormlyFieldConfig<RadioButtonProps> {
+  type: 'radio' | Type<FormlyFieldRadioButton>;
 }
 
 @Component({
-  selector: 'formly-field-primeng-radio',
+  selector: 'formly-field-radioButton',
   imports: [CommonModule, ReactiveFormsModule, FormlyModule, FormlySelectModule, RadioButtonModule],
   template: `
     <div
@@ -32,7 +32,7 @@ export interface FormlyRadioFieldConfig extends FormlyFieldConfig<RadioProps> {
   `,
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class FormlyFieldRadio extends FieldType<FieldTypeConfig<RadioProps>> {
+export class FormlyFieldRadioButton extends FieldType<FieldTypeConfig<RadioButtonProps>> {
   get disabledControl() {
     return new UntypedFormControl({ value: this.formControl.value, disabled: true });
   }

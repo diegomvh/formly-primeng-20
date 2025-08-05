@@ -17,7 +17,7 @@ export interface FormlySelectFieldConfig extends FormlyFieldConfig<SelectProps> 
 }
 
 @Component({
-  selector: 'formly-field-primeng-select',
+  selector: 'formly-field-select',
   imports: [CommonModule, ReactiveFormsModule, FormlyModule, FormlySelectModule, SelectModule],
   template: `
     <p-select
