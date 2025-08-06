@@ -1,12 +1,12 @@
 import {
   Component,
   ChangeDetectionStrategy,
-  ViewChild,
   Type,
 } from '@angular/core';
 import { AutoComplete, AutoCompleteCompleteEvent, AutoCompleteDropdownClickEvent, AutoCompleteModule, AutoCompleteSelectEvent, AutoCompleteUnselectEvent } from 'primeng/autocomplete';
-import { FieldType, FieldTypeConfig, FormlyFieldConfig, FormlyFieldProps, FormlyModule } from '@ngx-formly/core';
+import { FieldType, FieldTypeConfig, FormlyFieldConfig, FormlyModule } from '@ngx-formly/core';
 import { FormlyFieldSelectProps, FormlySelectModule } from '@ngx-formly/core/select';
+import { FormlyFieldProps } from '../form-field';
 import { ReactiveFormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 
@@ -66,7 +66,6 @@ export interface FormlyAutoCompleteFieldConfig extends FormlyFieldConfig<AutoCom
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class FormlyFieldAutoComplete extends FieldType<FieldTypeConfig<AutoCompleteProps>> {
-  @ViewChild(AutoComplete) autoComplete!: AutoComplete;
   override defaultOptions?: Partial<FieldTypeConfig<AutoCompleteProps>> = {
     props: {
       options: [],

@@ -5,7 +5,7 @@ export function withFormlyFieldRadioButton(): ConfigOption {
   return {
     types: [
       {
-        name: 'radioButton',
+        name: 'radiobutton',
         component: FormlyFieldRadioButton,
         wrappers: ['form-field'],
       },

@@ -5,27 +5,22 @@ import { InputTextModule } from 'primeng/inputtext';
 import { ReactiveFormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 
-interface InputProps extends FormlyFieldProps {}
+interface InputTextProps extends FormlyFieldProps {}
 
-export interface FormlyInputFieldConfig extends FormlyFieldConfig<InputProps> {
-  type: 'input' | Type<FormlyFieldInput>;
+export interface FormlyInputTextFieldConfig extends FormlyFieldConfig<InputTextProps> {
+  type: 'inputtext' | Type<FormlyFieldInputText>;
 }
 
 @Component({
-  selector: 'formly-field-primeng-input',
+  selector: 'formly-field-primeng-inputtext',
   imports: [CommonModule, ReactiveFormsModule, FormlyModule, InputTextModule],
   template: `
     <input
-      *ngIf="props.type !== 'number'; else numberTmp"
       pInputText
-      [type]="props.type || 'text'"
       [formControl]="formControl"
       [formlyAttributes]="field"
     />
-    <ng-template #numberTmp>
-      <input type="number" pInputText [formControl]="formControl" [formlyAttributes]="field" />
-    </ng-template>
   `,
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class FormlyFieldInput extends FieldType<FieldTypeConfig<InputProps>> {}
+export class FormlyFieldInputText extends FieldType<FieldTypeConfig<InputTextProps>> {}

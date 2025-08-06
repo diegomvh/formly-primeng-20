@@ -9,11 +9,11 @@ import { FormlySelectModule } from '@ngx-formly/core/select';
 type RadioButtonProps = FormlyFieldProps;
 
 export interface FormlyRadioButtonFieldConfig extends FormlyFieldConfig<RadioButtonProps> {
-  type: 'radio' | Type<FormlyFieldRadioButton>;
+  type: 'radiobutton' | Type<FormlyFieldRadioButton>;
 }
 
 @Component({
-  selector: 'formly-field-radioButton',
+  selector: 'formly-field-radiobutton',
   imports: [CommonModule, ReactiveFormsModule, FormlyModule, FormlySelectModule, RadioButtonModule],
   template: `
     <div

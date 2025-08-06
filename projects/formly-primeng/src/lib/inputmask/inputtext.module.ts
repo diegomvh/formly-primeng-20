@@ -5,7 +5,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { InputTextModule } from 'primeng/inputtext';
 import { FormlyFormFieldModule } from '../form-field';
 
-import { withFormlyFieldInput } from './input.config';
+import { withFormlyFieldInputText } from './inputtext.config';
 
 @NgModule({
   imports: [
@@ -13,7 +13,7 @@ import { withFormlyFieldInput } from './input.config';
     ReactiveFormsModule,
     InputTextModule,
     FormlyFormFieldModule,
-    FormlyModule.forChild(withFormlyFieldInput()),
+    FormlyModule.forChild(withFormlyFieldInputText()),
   ],
 })
-export class FormlyInputModule {}
+export class FormlyInputTextModule {}
