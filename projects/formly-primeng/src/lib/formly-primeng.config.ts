@@ -1,5 +1,6 @@
 import { withFormlyFormField } from './form-field';
-import { withFormlyFieldInput } from './inputtext';
+import { withFormlyFieldInputText } from './inputtext';
+import { withFormlyFieldInputNumber } from './inputnumber';
 import { withFormlyFieldTextArea } from './textarea';
 import { withFormlyFieldRadio } from './radiobutton';
 import { withFormlyFieldCheckbox } from './checkbox';
@@ -11,7 +12,8 @@ import { withFormlyFieldToggleSwitch } from './toggleswitch';
 export function withFormlyPrimeNG() {
   return [
     withFormlyFormField(),
-    withFormlyFieldInput(),
+    withFormlyFieldInputText(),
+    withFormlyFieldInputNumber(),
     withFormlyFieldAutoComplete(),
     withFormlyFieldTextArea(),
     withFormlyFieldRadio(),
