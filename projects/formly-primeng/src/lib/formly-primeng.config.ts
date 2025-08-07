@@ -8,12 +8,14 @@ import { withFormlyFieldSelect } from './select';
 import { withFormlyFieldDatepicker } from './datepicker';
 import { withFormlyFieldAutoComplete } from './autocomplete';
 import { withFormlyFieldToggleSwitch } from './toggleswitch';
+import { withFormlyFieldInputOtp } from './inputotp';
 
 export function withFormlyPrimeNG() {
   return [
     withFormlyFormField(),
     withFormlyFieldInputText(),
     withFormlyFieldInputNumber(),
+    withFormlyFieldInputOtp(),
     withFormlyFieldAutoComplete(),
     withFormlyFieldTextArea(),
     withFormlyFieldRadio(),

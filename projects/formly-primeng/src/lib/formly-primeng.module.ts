@@ -9,12 +9,14 @@ import { FormlyCheckboxModule } from './checkbox';
 import { FormlySelectModule } from './select';
 import { FormlyDatepickerModule } from './datepicker';
 import { FormlyToggleSwitchModule } from './toggleswitch';
+import { FormlyInputOtpModule } from './inputotp';
 
 @NgModule({
   imports: [
     FormlyFormFieldModule,
     FormlyInputTextModule,
     FormlyInputNumberModule,
+    FormlyInputOtpModule,
     FormlyAutoCompleteModule,
     FormlyTextAreaModule,
     FormlyRadioModule,
