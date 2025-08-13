@@ -8,7 +8,7 @@ export function withFormlyFieldToggleSwitch(): ConfigOption {
         {
           name: 'toggleswitch',
           component: FormlyFieldToggleSwitch,
-          wrappers: ['form-field'],
+          wrappers: ['field'],
         },
       ],
   };

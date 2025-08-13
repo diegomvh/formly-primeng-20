@@ -7,7 +7,7 @@ export function withFormlyFieldInputText(): ConfigOption {
       {
         name: 'input',
         component: FormlyFieldInputText,
-        wrappers: ['form-field'],
+        wrappers: ['field'],
       },
       { name: 'inputtext', extends: 'input' },
       { name: 'string', extends: 'input' }

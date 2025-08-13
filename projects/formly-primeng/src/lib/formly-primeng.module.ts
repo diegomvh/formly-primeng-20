@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { FormlyFormFieldModule } from './form-field';
+import { FormlyFormFieldModule } from './field';
 import { FormlyInputTextModule } from './inputtext';
 import { FormlyInputNumberModule } from './inputnumber';
 import { FormlyAutoCompleteModule } from './autocomplete';
@@ -10,6 +10,7 @@ import { FormlySelectModule } from './select';
 import { FormlyDatepickerModule } from './datepicker';
 import { FormlyToggleSwitchModule } from './toggleswitch';
 import { FormlyInputOtpModule } from './inputotp';
+import { FormlyPasswordModule } from './password';
 
 @NgModule({
   imports: [
@@ -19,6 +20,7 @@ import { FormlyInputOtpModule } from './inputotp';
     FormlyInputOtpModule,
     FormlyAutoCompleteModule,
     FormlyTextAreaModule,
+    FormlyPasswordModule,
     FormlyRadioModule,
     FormlyCheckboxModule,
     FormlySelectModule,

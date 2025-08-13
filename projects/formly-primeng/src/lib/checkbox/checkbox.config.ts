@@ -7,7 +7,7 @@ export function withFormlyFieldCheckbox(): ConfigOption {
       {
         name: 'checkbox',
         component: FormlyFieldCheckbox,
-        wrappers: ['form-field'],
+        wrappers: ['field'],
       },
       {
         name: 'boolean',

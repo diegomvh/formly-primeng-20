@@ -1,7 +1,7 @@
 import { Component, ChangeDetectionStrategy, Type } from '@angular/core';
 import { ReactiveFormsModule, UntypedFormControl } from '@angular/forms';
 import { FieldType, FieldTypeConfig, FormlyFieldConfig, FormlyModule } from '@ngx-formly/core';
-import { FormlyFieldProps } from '../form-field';
+import { FormlyFieldProps } from '../field';
 import { CommonModule } from '@angular/common';
 import { RadioButtonModule } from 'primeng/radiobutton';
 import { FormlySelectModule } from '@ngx-formly/core/select';

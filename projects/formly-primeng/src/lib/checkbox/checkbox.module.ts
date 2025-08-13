@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { FormlyModule } from '@ngx-formly/core';
 import { ReactiveFormsModule } from '@angular/forms';
 import { CheckboxModule } from 'primeng/checkbox';
-import { FormlyFormFieldModule } from '../form-field';
+import { FormlyFormFieldModule } from '../field';
 
 import { withFormlyFieldCheckbox } from './checkbox.config';
 

@@ -7,7 +7,7 @@ export function withFormlyFieldInputNumber(): ConfigOption {
       {
         name: 'number',
         component: FormlyFieldInputNumber,
-        wrappers: ['form-field'],
+        wrappers: ['field'],
       },
       { name: 'inputnumber', extends: 'number' },
       { name: 'integer', extends: 'number' },

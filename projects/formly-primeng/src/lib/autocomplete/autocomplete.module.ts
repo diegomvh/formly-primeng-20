@@ -4,7 +4,7 @@ import { FormlyModule } from '@ngx-formly/core';
 import { ReactiveFormsModule } from '@angular/forms';
 import { AutoCompleteModule } from 'primeng/autocomplete';
 import { FormlySelectModule } from '@ngx-formly/core/select';
-import { FormlyFormFieldModule } from '../form-field';
+import { FormlyFormFieldModule } from '../field';
 import { withFormlyFieldAutoComplete } from './autocomplete.config';
 
 @NgModule({

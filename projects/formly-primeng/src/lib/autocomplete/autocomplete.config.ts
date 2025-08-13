@@ -7,7 +7,7 @@ export function withFormlyFieldAutoComplete(): ConfigOption {
       {
         name: 'autoComplete',
         component: FormlyFieldAutoComplete,
-        wrappers: ['form-field'],
+        wrappers: ['field'],
       },
     ],
   };

@@ -4,7 +4,7 @@ import { FormlyModule } from '@ngx-formly/core';
 import { ReactiveFormsModule } from '@angular/forms';
 import { FormlySelectModule } from '@ngx-formly/core/select';
 import { RadioButtonModule } from 'primeng/radiobutton';
-import { FormlyFormFieldModule } from '../form-field';
+import { FormlyFormFieldModule } from '../field';
 import { withFormlyFieldRadioButton } from './radiobutton.config';
 
 @NgModule({

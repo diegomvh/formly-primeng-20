@@ -2,18 +2,18 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormlyModule } from '@ngx-formly/core';
 import { ReactiveFormsModule } from '@angular/forms';
-import { InputTextModule } from 'primeng/inputtext';
-import { FormlyFormFieldModule } from '../form-field';
+import { FormlyFormFieldModule } from '../field';
 
-import { withFormlyFieldInputText } from './inputtext.config';
+import { withFormlyFieldInputMask } from './inputmask.config';
+import { InputMaskModule } from 'primeng/inputmask';
 
 @NgModule({
   imports: [
     CommonModule,
     ReactiveFormsModule,
-    InputTextModule,
+    InputMaskModule,
     FormlyFormFieldModule,
-    FormlyModule.forChild(withFormlyFieldInputText()),
+    FormlyModule.forChild(withFormlyFieldInputMask()),
   ],
 })
-export class FormlyInputTextModule {}
+export class FormlyInputMaskModule {}

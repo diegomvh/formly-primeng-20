@@ -7,7 +7,7 @@ export function withFormlyFieldInputOtp(): ConfigOption {
       {
         name: 'inputotp',
         component: FormlyFieldInputOtp,
-        wrappers: ['form-field'],
+        wrappers: ['field'],
       },
     ],
   };

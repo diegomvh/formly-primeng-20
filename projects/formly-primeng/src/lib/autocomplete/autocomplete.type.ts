@@ -6,7 +6,7 @@ import {
 import { AutoComplete, AutoCompleteCompleteEvent, AutoCompleteDropdownClickEvent, AutoCompleteModule, AutoCompleteSelectEvent, AutoCompleteUnselectEvent } from 'primeng/autocomplete';
 import { FieldType, FieldTypeConfig, FormlyFieldConfig, FormlyModule } from '@ngx-formly/core';
 import { FormlyFieldSelectProps, FormlySelectModule } from '@ngx-formly/core/select';
-import { FormlyFieldProps } from '../form-field';
+import { FormlyFieldProps } from '../field';
 import { ReactiveFormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 

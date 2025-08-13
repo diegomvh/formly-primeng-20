@@ -7,7 +7,7 @@ export function withFormlyFieldDatepicker(): ConfigOption {
       {
         name: 'datepicker',
         component: FormlyFieldDatepicker,
-        wrappers: ['form-field'],
+        wrappers: ['field'],
       },
     ],
   };

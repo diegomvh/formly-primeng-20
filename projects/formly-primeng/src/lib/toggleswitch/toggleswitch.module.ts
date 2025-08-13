@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { FormlyModule } from '@ngx-formly/core';
 import { ReactiveFormsModule } from '@angular/forms';
 
-import { FormlyFormFieldModule } from '../form-field/form-field.module';
+import { FormlyFieldModule } from '../field/field.module';
 import { ToggleSwitchModule } from 'primeng/toggleswitch';
 import { withFormlyFieldToggleSwitch } from './toggleswitch.config';
 
@@ -13,7 +13,7 @@ import { withFormlyFieldToggleSwitch } from './toggleswitch.config';
     ReactiveFormsModule,
     ToggleSwitchModule,
 
-    FormlyFormFieldModule,
+    FormlyFieldModule,
     FormlyModule.forChild(withFormlyFieldToggleSwitch()),
   ],
 })

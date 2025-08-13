@@ -1,6 +1,6 @@
 import { Component, ChangeDetectionStrategy, Type } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FormlyFieldProps } from '../form-field';
+import { FormlyFieldProps } from '../field';
 import { ReactiveFormsModule } from '@angular/forms';
 import { FieldType, FieldTypeConfig, FormlyFieldConfig, FormlyModule } from '@ngx-formly/core';
 import { ToggleSwitchModule } from 'primeng/toggleswitch';

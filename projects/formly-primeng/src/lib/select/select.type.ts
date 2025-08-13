@@ -1,6 +1,6 @@
 import { Component, ChangeDetectionStrategy, Type } from '@angular/core';
 import { FieldType, FieldTypeConfig, FormlyFieldConfig, FormlyModule } from '@ngx-formly/core';
-import { FormlyFieldProps } from '../form-field';
+import { FormlyFieldProps } from '../field';
 import { FormlyFieldSelectProps, FormlySelectModule } from '@ngx-formly/core/select';
 import { Select, SelectModule } from 'primeng/select';
 import { CommonModule } from '@angular/common';

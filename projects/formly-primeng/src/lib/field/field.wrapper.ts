@@ -9,7 +9,7 @@ export interface FormlyFieldProps extends CoreFormlyFieldProps {
 }
 
 @Component({
-  selector: 'formly-wrapper-primeng-form-field',
+  selector: 'formly-wrapper-primeng-field',
   imports: [CommonModule, ReactiveFormsModule, FormlyModule],
   template: `
     <div class="p-field">
@@ -25,4 +25,4 @@ export interface FormlyFieldProps extends CoreFormlyFieldProps {
     </div>
   `,
 })
-export class FormlyWrapperFormField extends FieldWrapper<FormlyFieldConfig<FormlyFieldProps>> {}
+export class FormlyFieldWrapper extends FieldWrapper<FormlyFieldConfig<FormlyFieldProps>> {}

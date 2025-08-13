@@ -7,7 +7,7 @@ export function withFormlyFieldTextArea(): ConfigOption {
       {
         name: 'textarea',
         component: FormlyFieldTextArea,
-        wrappers: ['form-field'],
+        wrappers: ['field'],
       },
     ],
   };

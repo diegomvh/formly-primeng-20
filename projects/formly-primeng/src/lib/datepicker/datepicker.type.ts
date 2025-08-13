@@ -1,6 +1,6 @@
 import { Component, ChangeDetectionStrategy, Type } from '@angular/core';
 import { FieldType, FieldTypeConfig, FormlyFieldConfig, FormlyModule } from '@ngx-formly/core';
-import { FormlyFieldProps } from '../form-field';
+import { FormlyFieldProps } from '../field';
 import { DatePickerModule } from 'primeng/datepicker';
 import { CommonModule } from '@angular/common';
 import { ReactiveFormsModule } from '@angular/forms';
