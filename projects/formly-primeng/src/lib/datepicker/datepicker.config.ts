@@ -1,12 +1,12 @@
-import { FormlyFieldDatepicker } from './datepicker.type';
+import { FormlyFieldDatePicker } from './datepicker.type';
 import { ConfigOption } from '@ngx-formly/core';
 
-export function withFormlyFieldDatepicker(): ConfigOption {
+export function withFormlyFieldDatePicker(): ConfigOption {
   return {
     types: [
       {
         name: 'datepicker',
-        component: FormlyFieldDatepicker,
+        component: FormlyFieldDatePicker,
         wrappers: ['field'],
       },
     ],

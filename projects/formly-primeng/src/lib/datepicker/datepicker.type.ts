@@ -5,7 +5,7 @@ import { DatePickerModule } from 'primeng/datepicker';
 import { CommonModule } from '@angular/common';
 import { ReactiveFormsModule } from '@angular/forms';
 
-interface DatepickerProps extends FormlyFieldProps {
+interface DatePickerProps extends FormlyFieldProps {
   defaultDate: Date | null;
   dateFormat?: string;
   hourFormat: string;
@@ -21,8 +21,8 @@ interface DatepickerProps extends FormlyFieldProps {
   touchUI?: boolean;
 }
 
-export interface FormlyDatepickerFieldConfig extends FormlyFieldConfig<DatepickerProps> {
-  type: 'datepicker' | Type<FormlyFieldDatepicker>;
+export interface FormlyDatepickerFieldConfig extends FormlyFieldConfig<DatePickerProps> {
+  type: 'datepicker' | Type<FormlyFieldDatePicker>;
 }
 
 @Component({
@@ -51,8 +51,8 @@ export interface FormlyDatepickerFieldConfig extends FormlyFieldConfig<Datepicke
   `,
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class FormlyFieldDatepicker extends FieldType<FieldTypeConfig<DatepickerProps>> {
-  override defaultOptions?: Partial<FieldTypeConfig<DatepickerProps>> = {
+export class FormlyFieldDatePicker extends FieldType<FieldTypeConfig<DatePickerProps>> {
+  override defaultOptions?: Partial<FieldTypeConfig<DatePickerProps>> = {
     props: {
       defaultDate: null,
       dateFormat: 'mm/dd/yy',

@@ -2,18 +2,18 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormlyModule } from '@ngx-formly/core';
 import { ReactiveFormsModule } from '@angular/forms';
-import { DatePickerModule } from 'primeng/datepicker';
+import { CheckboxModule } from 'primeng/checkbox';
 import { FormlyFormFieldModule } from '../field';
-import { withFormlyFieldDatePicker } from './datepicker.config';
+
+import { withFormlyFieldCheckbox } from './colorpicker.config';
 
 @NgModule({
   imports: [
     CommonModule,
     ReactiveFormsModule,
-    DatePickerModule,
-
+    CheckboxModule,
     FormlyFormFieldModule,
-    FormlyModule.forChild(withFormlyFieldDatePicker()),
+    FormlyModule.forChild(withFormlyFieldCheckbox()),
   ],
 })
-export class FormlyDatePickerModule {}
+export class FormlyCheckboxModule {}

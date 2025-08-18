@@ -29,11 +29,11 @@ interface AutoCompleteProps extends FormlyFieldProps, FormlyFieldSelectProps {
 }
 
 export interface FormlyAutoCompleteFieldConfig extends FormlyFieldConfig<AutoCompleteProps> {
-  type: 'autoComplete' | Type<FormlyFieldAutoComplete>;
+  type: 'autocomplete' | Type<FormlyFieldAutoComplete>;
 }
 
 @Component({
-  selector: 'formly-field-primeng-autoComplete',
+  selector: 'formly-field-primeng-autocomplete',
   imports: [CommonModule, ReactiveFormsModule, FormlyModule, FormlySelectModule, AutoCompleteModule],
   template: `
     <p-autoComplete

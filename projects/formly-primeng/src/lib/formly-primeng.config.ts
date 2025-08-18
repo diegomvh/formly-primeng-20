@@ -5,11 +5,12 @@ import { withFormlyFieldTextArea } from './textarea';
 import { withFormlyFieldRadio } from './radiobutton';
 import { withFormlyFieldCheckbox } from './checkbox';
 import { withFormlyFieldSelect } from './select';
-import { withFormlyFieldDatepicker } from './datepicker';
+import { withFormlyFieldDatePicker } from './datepicker';
 import { withFormlyFieldAutoComplete } from './autocomplete';
 import { withFormlyFieldToggleSwitch } from './toggleswitch';
 import { withFormlyFieldInputOtp } from './inputotp';
 import { withFormlyFieldPassword } from './password';
+import { withFormlyFieldColorPicker } from './colorpicker';
 
 export function withFormlyPrimeNG() {
   return [
@@ -23,7 +24,8 @@ export function withFormlyPrimeNG() {
     withFormlyFieldRadio(),
     withFormlyFieldCheckbox(),
     withFormlyFieldSelect(),
-    withFormlyFieldDatepicker(),
-    withFormlyFieldToggleSwitch()
+    withFormlyFieldDatePicker(),
+    withFormlyFieldToggleSwitch(),
+    withFormlyFieldColorPicker(),
   ];
 }

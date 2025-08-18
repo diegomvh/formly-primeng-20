@@ -11,6 +11,7 @@ import { FormlyDatepickerModule } from './datepicker';
 import { FormlyToggleSwitchModule } from './toggleswitch';
 import { FormlyInputOtpModule } from './inputotp';
 import { FormlyPasswordModule } from './password';
+import { FormlyColorPickerModule } from './colorpicker';
 
 @NgModule({
   imports: [
@@ -25,7 +26,8 @@ import { FormlyPasswordModule } from './password';
     FormlyCheckboxModule,
     FormlySelectModule,
     FormlyDatepickerModule,
-    FormlyToggleSwitchModule
+    FormlyToggleSwitchModule,
+    FormlyColorPickerModule
   ],
 })
 export class FormlyPrimeNGModule {}

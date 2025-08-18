@@ -1,2 +1,2 @@
-export { withFormlyFieldDatepicker } from './datepicker.config';
-export { FormlyDatepickerModule } from './datepicker.module';
+export { withFormlyFieldDatePicker } from './datepicker.config';
+export { FormlyDatePickerModule as FormlyDatepickerModule } from './datepicker.module';
