@@ -16,21 +16,33 @@ import { withFormlyFieldSlider } from './slider';
 import { withFormlyFieldRating } from './rating';
 import { withFormlyFieldKnob } from './knob';
 import { withFormlyFieldInputMask } from './inputmask';
+import { withFormlyFieldTreeSelect } from './treeselect';
+import { withFormlyFieldToggleButton } from './togglebutton/togglebutton.config';
+import { withFormlyFieldSelectButton } from './selectbutton';
+import { withFormlyFieldMultiSelect } from './multiselect';
+import { withFormlyFieldListbox } from './listbox/listbox.config';
+import { withFormlyFieldCascadeSelect } from './cascadeselect';
 
 export function withFormlyPrimeNG() {
   return [
+    withFormlyFieldAutoComplete(),
+    withFormlyFieldCascadeSelect(),
     withFormlyFormField(),
     withFormlyFieldInputText(),
     withFormlyFieldInputNumber(),
     withFormlyFieldInputOtp(),
-    withFormlyFieldAutoComplete(),
     withFormlyFieldTextArea(),
     withFormlyFieldPassword(),
     withFormlyFieldRadio(),
     withFormlyFieldCheckbox(),
+    withFormlyFieldListbox(),
+    withFormlyFieldMultiSelect(),
     withFormlyFieldSelect(),
+    withFormlyFieldSelectButton(),
+    withFormlyFieldTreeSelect(),
     withFormlyFieldDatePicker(),
     withFormlyFieldToggleSwitch(),
+    withFormlyFieldToggleButton(),
     withFormlyFieldColorPicker(),
     withFormlyFieldEditor(),
     withFormlyFieldSlider(),

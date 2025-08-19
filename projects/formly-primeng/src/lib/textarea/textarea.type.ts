@@ -22,4 +22,9 @@ export interface FormlyTextAreaFieldConfig extends FormlyFieldConfig<TextAreaPro
   ></textarea> `,
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class FormlyFieldTextArea extends FieldType<FieldTypeConfig<TextAreaProps>> {}
+export class FormlyFieldTextArea extends FieldType<FieldTypeConfig<TextAreaProps>> {
+  override defaultOptions?: Partial<FieldTypeConfig<TextAreaProps>> = {
+    props: {
+    },
+  };
+}

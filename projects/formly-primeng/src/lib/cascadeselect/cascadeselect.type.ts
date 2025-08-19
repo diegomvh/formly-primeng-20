@@ -2,43 +2,41 @@ import { Component, ChangeDetectionStrategy, Type } from '@angular/core';
 import { FieldType, FieldTypeConfig, FormlyFieldConfig, FormlyModule } from '@ngx-formly/core';
 import { FormlyFieldProps } from '../field';
 import { FormlyFieldSelectProps, FormlySelectModule } from '@ngx-formly/core/select';
-import { Select, SelectModule } from 'primeng/select';
 import { CommonModule } from '@angular/common';
 import { ReactiveFormsModule } from '@angular/forms';
+import { CascadeSelect, CascadeSelectModule } from 'primeng/cascadeselect';
 
-interface SelectProps extends FormlyFieldProps, FormlyFieldSelectProps {
-  appendTo?: Select['appendTo'];
+interface CascadeSelectProps extends FormlyFieldProps, FormlyFieldSelectProps {
+  appendTo?: CascadeSelect['appendTo'];
   filter?: boolean;
   filterBy?: string;
 }
 
-export interface FormlySelectFieldConfig extends FormlyFieldConfig<SelectProps> {
-  type: 'select' | Type<FormlyFieldSelect>;
+export interface FormlyCascadeSelectFieldConfig extends FormlyFieldConfig<CascadeSelectProps> {
+  type: 'cascadeselect' | Type<FormlyFieldCascadeSelect>;
 }
 
 @Component({
-  selector: 'formly-field-select',
-  imports: [CommonModule, ReactiveFormsModule, FormlyModule, FormlySelectModule, SelectModule],
+  selector: 'formly-field-cascadeselect',
+  imports: [CommonModule, ReactiveFormsModule, FormlyModule, FormlySelectModule, CascadeSelectModule],
   template: `
-    <p-select
+    <p-cascadeselect
       [placeholder]="props.placeholder"
       [options]="$any(props.options | formlySelectOptions: field | async)"
       [formControl]="formControl"
       [formlyAttributes]="field"
       [showClear]="!props.required"
       [appendTo]="props.appendTo"
-      [filter]="props.filter"
-      [filterBy]="props.filterBy ?? 'label'"
       [optionLabel]="'label'"
       [optionValue]="'value'"
       (onChange)="props.change && props.change(field, $event)"
     >
-    </p-select>
+    </p-cascadeselect>
   `,
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class FormlyFieldSelect extends FieldType<FieldTypeConfig<SelectProps>> {
-  override defaultOptions?: Partial<FieldTypeConfig<SelectProps>> = {
+export class FormlyFieldCascadeSelect extends FieldType<FieldTypeConfig<CascadeSelectProps>> {
+  override defaultOptions?: Partial<FieldTypeConfig<CascadeSelectProps>> = {
     props: {
     },
   };

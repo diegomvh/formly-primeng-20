@@ -2,25 +2,25 @@ import { Component, ChangeDetectionStrategy, Type } from '@angular/core';
 import { FieldType, FieldTypeConfig, FormlyFieldConfig, FormlyModule } from '@ngx-formly/core';
 import { FormlyFieldProps } from '../field';
 import { FormlyFieldSelectProps, FormlySelectModule } from '@ngx-formly/core/select';
-import { Select, SelectModule } from 'primeng/select';
 import { CommonModule } from '@angular/common';
 import { ReactiveFormsModule } from '@angular/forms';
+import { MultiSelect, MultiSelectModule } from 'primeng/multiselect';
 
-interface SelectProps extends FormlyFieldProps, FormlyFieldSelectProps {
-  appendTo?: Select['appendTo'];
+interface MultiSelectProps extends FormlyFieldProps, FormlyFieldSelectProps {
+  appendTo?: MultiSelect['appendTo'];
   filter?: boolean;
   filterBy?: string;
 }
 
-export interface FormlySelectFieldConfig extends FormlyFieldConfig<SelectProps> {
-  type: 'select' | Type<FormlyFieldSelect>;
+export interface FormlyMultiSelectFieldConfig extends FormlyFieldConfig<MultiSelectProps> {
+  type: 'multiselect' | Type<FormlyFieldMultiSelect>;
 }
 
 @Component({
-  selector: 'formly-field-select',
-  imports: [CommonModule, ReactiveFormsModule, FormlyModule, FormlySelectModule, SelectModule],
+  selector: 'formly-field-multiselect',
+  imports: [CommonModule, ReactiveFormsModule, FormlyModule, FormlySelectModule, MultiSelectModule],
   template: `
-    <p-select
+    <p-multiselect
       [placeholder]="props.placeholder"
       [options]="$any(props.options | formlySelectOptions: field | async)"
       [formControl]="formControl"
@@ -33,12 +33,12 @@ export interface FormlySelectFieldConfig extends FormlyFieldConfig<SelectProps> 
       [optionValue]="'value'"
       (onChange)="props.change && props.change(field, $event)"
     >
-    </p-select>
+    </p-multiselect>
   `,
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class FormlyFieldSelect extends FieldType<FieldTypeConfig<SelectProps>> {
-  override defaultOptions?: Partial<FieldTypeConfig<SelectProps>> = {
+export class FormlyFieldMultiSelect extends FieldType<FieldTypeConfig<MultiSelectProps>> {
+  override defaultOptions?: Partial<FieldTypeConfig<MultiSelectProps>> = {
     props: {
     },
   };

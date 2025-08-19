@@ -2,25 +2,25 @@ import { Component, ChangeDetectionStrategy, Type } from '@angular/core';
 import { FieldType, FieldTypeConfig, FormlyFieldConfig, FormlyModule } from '@ngx-formly/core';
 import { FormlyFieldProps } from '../field';
 import { FormlyFieldSelectProps, FormlySelectModule } from '@ngx-formly/core/select';
-import { Select, SelectModule } from 'primeng/select';
 import { CommonModule } from '@angular/common';
 import { ReactiveFormsModule } from '@angular/forms';
+import { TreeSelect, TreeSelectModule } from 'primeng/treeselect';
 
-interface SelectProps extends FormlyFieldProps, FormlyFieldSelectProps {
-  appendTo?: Select['appendTo'];
+interface TreeSelectProps extends FormlyFieldProps, FormlyFieldSelectProps {
+  appendTo?: TreeSelect['appendTo'];
   filter?: boolean;
   filterBy?: string;
 }
 
-export interface FormlySelectFieldConfig extends FormlyFieldConfig<SelectProps> {
-  type: 'select' | Type<FormlyFieldSelect>;
+export interface FormlyTreeSelectFieldConfig extends FormlyFieldConfig<TreeSelectProps> {
+  type: 'treeselect' | Type<FormlyFieldTreeSelect>;
 }
 
 @Component({
-  selector: 'formly-field-select',
-  imports: [CommonModule, ReactiveFormsModule, FormlyModule, FormlySelectModule, SelectModule],
+  selector: 'formly-field-treeselect',
+  imports: [CommonModule, ReactiveFormsModule, FormlyModule, FormlySelectModule, TreeSelectModule],
   template: `
-    <p-select
+    <p-treeselect
       [placeholder]="props.placeholder"
       [options]="$any(props.options | formlySelectOptions: field | async)"
       [formControl]="formControl"
@@ -29,16 +29,14 @@ export interface FormlySelectFieldConfig extends FormlyFieldConfig<SelectProps> 
       [appendTo]="props.appendTo"
       [filter]="props.filter"
       [filterBy]="props.filterBy ?? 'label'"
-      [optionLabel]="'label'"
-      [optionValue]="'value'"
       (onChange)="props.change && props.change(field, $event)"
     >
-    </p-select>
+    </p-treeselect>
   `,
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class FormlyFieldSelect extends FieldType<FieldTypeConfig<SelectProps>> {
-  override defaultOptions?: Partial<FieldTypeConfig<SelectProps>> = {
+export class FormlyFieldTreeSelect extends FieldType<FieldTypeConfig<TreeSelectProps>> {
+  override defaultOptions?: Partial<FieldTypeConfig<TreeSelectProps>> = {
     props: {
     },
   };

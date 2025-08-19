@@ -2,43 +2,37 @@ import { Component, ChangeDetectionStrategy, Type } from '@angular/core';
 import { FieldType, FieldTypeConfig, FormlyFieldConfig, FormlyModule } from '@ngx-formly/core';
 import { FormlyFieldProps } from '../field';
 import { FormlyFieldSelectProps, FormlySelectModule } from '@ngx-formly/core/select';
-import { Select, SelectModule } from 'primeng/select';
 import { CommonModule } from '@angular/common';
 import { ReactiveFormsModule } from '@angular/forms';
+import { SelectButtonModule } from 'primeng/selectbutton';
 
-interface SelectProps extends FormlyFieldProps, FormlyFieldSelectProps {
-  appendTo?: Select['appendTo'];
+interface SelectButtonProps extends FormlyFieldProps, FormlyFieldSelectProps {
   filter?: boolean;
   filterBy?: string;
 }
 
-export interface FormlySelectFieldConfig extends FormlyFieldConfig<SelectProps> {
-  type: 'select' | Type<FormlyFieldSelect>;
+export interface FormlySelectButtonFieldConfig extends FormlyFieldConfig<SelectButtonProps> {
+  type: 'selectbutton' | Type<FormlyFieldSelectButton>;
 }
 
 @Component({
-  selector: 'formly-field-select',
-  imports: [CommonModule, ReactiveFormsModule, FormlyModule, FormlySelectModule, SelectModule],
+  selector: 'formly-field-selectbutton',
+  imports: [CommonModule, ReactiveFormsModule, FormlyModule, FormlySelectModule, SelectButtonModule],
   template: `
-    <p-select
-      [placeholder]="props.placeholder"
+    <p-selectbutton
       [options]="$any(props.options | formlySelectOptions: field | async)"
       [formControl]="formControl"
       [formlyAttributes]="field"
-      [showClear]="!props.required"
-      [appendTo]="props.appendTo"
-      [filter]="props.filter"
-      [filterBy]="props.filterBy ?? 'label'"
       [optionLabel]="'label'"
       [optionValue]="'value'"
       (onChange)="props.change && props.change(field, $event)"
     >
-    </p-select>
+    </p-selectbutton>
   `,
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class FormlyFieldSelect extends FieldType<FieldTypeConfig<SelectProps>> {
-  override defaultOptions?: Partial<FieldTypeConfig<SelectProps>> = {
+export class FormlyFieldSelectButton extends FieldType<FieldTypeConfig<SelectButtonProps>> {
+  override defaultOptions?: Partial<FieldTypeConfig<SelectButtonProps>> = {
     props: {
     },
   };
