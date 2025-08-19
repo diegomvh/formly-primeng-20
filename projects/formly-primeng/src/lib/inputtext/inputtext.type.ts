@@ -16,6 +16,7 @@ export interface FormlyInputTextFieldConfig extends FormlyFieldConfig<InputTextP
   imports: [CommonModule, ReactiveFormsModule, FormlyModule, InputTextModule],
   template: `
     <input
+      [id]="id"
       pInputText
       [formControl]="formControl"
       [formlyAttributes]="field"

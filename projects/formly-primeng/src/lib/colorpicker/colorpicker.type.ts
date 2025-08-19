@@ -24,5 +24,8 @@ export interface FormlyColorPickerFieldConfig extends FormlyFieldConfig<ColorPic
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class FormlyFieldColorPicker extends FieldType<FieldTypeConfig<ColorPickerProps>> {
-  override defaultOptions = { props: { hideLabel: true } };
+  override defaultOptions?: Partial<FieldTypeConfig<ColorPickerProps>> = {
+    props: {
+    },
+  };
 }

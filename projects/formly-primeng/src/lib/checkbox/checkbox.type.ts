@@ -15,6 +15,7 @@ export interface FormlyCheckboxFieldConfig extends FormlyFieldConfig<CheckboxPro
   template: `
     <div class="p-field-checkbox flex items-center gap-1">
       <p-checkbox
+        [inputId]="id"
         [binary]="true"
         [formControl]="formControl"
         [formlyAttributes]="field"

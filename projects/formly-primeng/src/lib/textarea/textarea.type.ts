@@ -14,7 +14,12 @@ export interface FormlyTextAreaFieldConfig extends FormlyFieldConfig<TextAreaPro
 @Component({
   selector: 'formly-field-primeng-textarea',
   imports: [CommonModule, ReactiveFormsModule, FormlyModule, TextareaModule],
-  template: ` <textarea [formControl]="formControl" [formlyAttributes]="field" pInputTextarea></textarea> `,
+  template: ` <textarea 
+    [id]="id"
+    pInputTextarea
+    [formControl]="formControl" 
+    [formlyAttributes]="field" 
+  ></textarea> `,
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class FormlyFieldTextArea extends FieldType<FieldTypeConfig<TextAreaProps>> {}

@@ -5,7 +5,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { CheckboxModule } from 'primeng/checkbox';
 import { FormlyFormFieldModule } from '../field';
 
-import { withFormlyFieldCheckbox } from './colorpicker.config';
+import { withFormlyFieldColorPicker } from './colorpicker.config';
 
 @NgModule({
   imports: [
@@ -13,7 +13,7 @@ import { withFormlyFieldCheckbox } from './colorpicker.config';
     ReactiveFormsModule,
     CheckboxModule,
     FormlyFormFieldModule,
-    FormlyModule.forChild(withFormlyFieldCheckbox()),
+    FormlyModule.forChild(withFormlyFieldColorPicker()),
   ],
 })
-export class FormlyCheckboxModule {}
+export class FormlyColorPickerModule {}

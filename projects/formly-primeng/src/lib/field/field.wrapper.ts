@@ -6,22 +6,33 @@ import { FieldWrapper, FormlyFieldConfig, FormlyFieldProps as CoreFormlyFieldPro
 export interface FormlyFieldProps extends CoreFormlyFieldProps {
   hideRequiredMarker?: boolean;
   hideLabel?: boolean;
+  helpText?: boolean;
+  hideHelpText?: boolean;
 }
 
 @Component({
   selector: 'formly-wrapper-primeng-field',
   imports: [CommonModule, ReactiveFormsModule, FormlyModule],
   template: `
-    <div class="p-field">
-      <label *ngIf="props.label && props.hideLabel !== true" [for]="id">
+    <div class="flex flex-col">
+      @if (props.label && !props.hideLabel) {
+      <label [for]="id">
         {{ props.label }}
-        <span *ngIf="props.required && props.hideRequiredMarker !== true" aria-hidden="true">*</span>
+        @if (props.required && !props.hideRequiredMarker) {
+          <span aria-hidden="true">*</span>
+        }
       </label>
+      }
       <ng-container #fieldComponent></ng-container>
+      @if (props.helpText && !props.hideHelpText) {
+        <small>{{props.helpText}}</small>
+      }
 
-      <small *ngIf="showError" class="p-error">
-        <formly-validation-message class="ui-message-text" [field]="field"></formly-validation-message>
-      </small>
+      @if (showError) {
+        <small>
+          <formly-validation-message [field]="field"></formly-validation-message>
+        </small>
+      }
     </div>
   `,
 })

@@ -12,11 +12,17 @@ import { FormlyToggleSwitchModule } from './toggleswitch';
 import { FormlyInputOtpModule } from './inputotp';
 import { FormlyPasswordModule } from './password';
 import { FormlyColorPickerModule } from './colorpicker';
+import { FormlyEditorModule } from './editor';
+import { FormlySliderModule } from './slider';
+import { FormlyRatingModule } from './rating';
+import { FormlyKnobModule } from './knob';
+import { FormlyInputMaskModule } from './inputmask';
 
 @NgModule({
   imports: [
     FormlyFormFieldModule,
     FormlyInputTextModule,
+    FormlyInputMaskModule,
     FormlyInputNumberModule,
     FormlyInputOtpModule,
     FormlyAutoCompleteModule,
@@ -27,7 +33,11 @@ import { FormlyColorPickerModule } from './colorpicker';
     FormlySelectModule,
     FormlyDatepickerModule,
     FormlyToggleSwitchModule,
-    FormlyColorPickerModule
+    FormlyColorPickerModule,
+    FormlyEditorModule,
+    FormlySliderModule,
+    FormlyRatingModule,
+    FormlyKnobModule,
   ],
 })
 export class FormlyPrimeNGModule {}

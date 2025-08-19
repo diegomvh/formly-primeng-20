@@ -27,12 +27,68 @@ export class App {
       },
     },
     {
+      key: 'inputtext',
+      type: 'inputtext',
+      className: 'col-4',
+      templateOptions: {
+        label: 'InputText',
+        placeholder: 'Input placeholder',
+        required: true,
+      },
+    },
+    {
+      key: 'inputotp',
+      type: 'inputotp',
+      className: 'col-4',
+      templateOptions: {
+        label: 'InputOtp',
+        placeholder: 'InputOtp placeholder',
+        required: true,
+      },
+    },
+    {
+      key: 'inputnumber',
+      type: 'inputnumber',
+      className: 'col-4',
+      templateOptions: {
+        label: 'InputNumber',
+        placeholder: 'InputNumber placeholder',
+        required: true,
+      },
+    },
+    {
+      key: 'inputmask',
+      type: 'inputmask',
+      className: 'col-4',
+      templateOptions: {
+        label: 'InputMask',
+        placeholder: 'InputMask placeholder',
+        required: true,
+      },
+    },
+    {
       key: 'checkbox',
       type: 'checkbox',
       className: 'col-2',
       templateOptions: {
         label: 'Checkbox',
         binary: true,
+      },
+    },
+    {
+      key: 'datepicker',
+      type: 'datepicker',
+      className: 'col-2',
+      templateOptions: {
+        label: 'DatePicker',
+      },
+    },
+    {
+      key: 'colorpicker',
+      type: 'colorpicker',
+      className: 'col-2',
+      templateOptions: {
+        label: 'ColorPicker',
       },
     },
     {
@@ -52,7 +108,7 @@ export class App {
     },
     {
       key: 'radio',
-      type: 'radioButton',
+      type: 'radiobutton',
       className: 'col-2',
       templateOptions: {
         label: 'Radio',
@@ -68,8 +124,58 @@ export class App {
       type: 'textarea',
       className: 'col-12',
       templateOptions: {
-        label: '',
+        label: 'TextArea',
         placeholder: 'Textarea placeholder',
+        required: true,
+      },
+    },
+    {
+      key: 'password',
+      type: 'password',
+      className: 'col-12',
+      templateOptions: {
+        label: '',
+        placeholder: 'Password placeholder',
+        required: true,
+      },
+    },
+    {
+      key: 'slider',
+      type: 'slider',
+      className: 'col-12',
+      templateOptions: {
+        label: '',
+        placeholder: 'Slider placeholder',
+        required: true,
+      },
+    },
+    {
+      key: 'knob',
+      type: 'knob',
+      className: 'col-12',
+      templateOptions: {
+        label: '',
+        placeholder: 'Knob placeholder',
+        required: true,
+      },
+    },
+    {
+      key: 'editor',
+      type: 'editor',
+      className: 'col-12',
+      templateOptions: {
+        label: '',
+        placeholder: 'Editor placeholder',
+        required: true,
+      },
+    },
+    {
+      key: 'autocomplete',
+      type: 'autocomplete',
+      className: 'col-12',
+      templateOptions: {
+        label: 'AutoComplete',
+        placeholder: 'Autocomplete placeholder',
         required: true,
       },
     }

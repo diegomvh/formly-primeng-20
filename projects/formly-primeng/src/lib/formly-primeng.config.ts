@@ -11,6 +11,11 @@ import { withFormlyFieldToggleSwitch } from './toggleswitch';
 import { withFormlyFieldInputOtp } from './inputotp';
 import { withFormlyFieldPassword } from './password';
 import { withFormlyFieldColorPicker } from './colorpicker';
+import { withFormlyFieldEditor } from './editor';
+import { withFormlyFieldSlider } from './slider';
+import { withFormlyFieldRating } from './rating';
+import { withFormlyFieldKnob } from './knob';
+import { withFormlyFieldInputMask } from './inputmask';
 
 export function withFormlyPrimeNG() {
   return [
@@ -27,5 +32,10 @@ export function withFormlyPrimeNG() {
     withFormlyFieldDatePicker(),
     withFormlyFieldToggleSwitch(),
     withFormlyFieldColorPicker(),
+    withFormlyFieldEditor(),
+    withFormlyFieldSlider(),
+    withFormlyFieldRating(),
+    withFormlyFieldKnob(),
+    withFormlyFieldInputMask(),
   ];
 }

@@ -30,6 +30,7 @@ export interface FormlyDatepickerFieldConfig extends FormlyFieldConfig<DatePicke
   imports: [CommonModule, ReactiveFormsModule, FormlyModule, DatePickerModule],
   template: `
     <p-datepicker
+      [inputId]="id"
       [defaultDate]="props.defaultDate"
       [dateFormat]="props.dateFormat"
       [hourFormat]="props.hourFormat"

@@ -37,6 +37,7 @@ export interface FormlyAutoCompleteFieldConfig extends FormlyFieldConfig<AutoCom
   imports: [CommonModule, ReactiveFormsModule, FormlyModule, FormlySelectModule, AutoCompleteModule],
   template: `
     <p-autoComplete
+      [inputId]="id"
       [placeholder]="props.placeholder"
       [appendTo]="props.appendTo"
       [tabindex]="props.tabindex"
