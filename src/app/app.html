@@ -2,14 +2,10 @@
   <h4 class="mat-h2">Angular Formly PrimeNg</h4>
 </div>
 
-<form [formGroup]="form" (ngSubmit)="onSubmit()">
-  <formly-form [form]="form" [model]="model" [fields]="fields"></formly-form>
-
-  <div>
-    <p-button label="Submit"/>
-    <p-button label="Reset"/>
-    <p-button label="set" (click)="setValue()"/>
-  </div>
-</form>
+<formly-form 
+  [form]="form" 
+  [model]="model" 
+  [fields]="fields"
+></formly-form>
 
 <p>{{ model | json }}</p>

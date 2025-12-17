@@ -19,8 +19,8 @@ export class App {
     {
       key: 'autocomplete',
       type: 'autocomplete',
-      className: 'col-12',
-      templateOptions: {
+      className: 'flex flex-col',
+      props: {
         label: 'AutoComplete',
         placeholder: 'Autocomplete placeholder',
       },
@@ -29,7 +29,7 @@ export class App {
       key: 'cascadeselect',
       type: 'cascadeselect',
       className: 'col-12',
-      templateOptions: {
+      props: {
         label: 'CascadeSelect',
         placeholder: 'CascadeSelect placeholder',
       },
@@ -38,7 +38,7 @@ export class App {
       key: 'checkbox',
       type: 'checkbox',
       className: 'col-12',
-      templateOptions: {
+      props: {
         label: 'Checkbox',
         binary: true,
       },
@@ -47,7 +47,7 @@ export class App {
       key: 'colorpicker',
       type: 'colorpicker',
       className: 'col-12',
-      templateOptions: {
+      props: {
         label: 'ColorPicker',
         placeholder: 'ColorPicker placeholder',
       },
@@ -56,7 +56,7 @@ export class App {
       key: 'datepicker',
       type: 'datepicker',
       className: 'col-12',
-      templateOptions: {
+      props: {
         label: 'DatePicker',
         placeholder: 'DatePicker placeholder',
       },
@@ -65,7 +65,7 @@ export class App {
       key: 'editor',
       type: 'editor',
       className: 'col-12',
-      templateOptions: {
+      props: {
         label: 'Editor',
         placeholder: 'Editor placeholder',
       },
@@ -74,7 +74,7 @@ export class App {
       key: 'inputmask',
       type: 'inputmask',
       className: 'col-12',
-      templateOptions: {
+      props: {
         label: 'InputMask',
         placeholder: 'InputMask placeholder',
       },
@@ -83,7 +83,7 @@ export class App {
       key: 'inputnumber',
       type: 'inputnumber',
       className: 'col-12',
-      templateOptions: {
+      props: {
         label: 'InputNumber',
         placeholder: 'InputNumber placeholder'
       },
@@ -92,7 +92,7 @@ export class App {
       key: 'inputotp',
       type: 'inputotp',
       className: 'col-12',
-      templateOptions: {
+      props: {
         label: 'InputOtp',
         placeholder: 'InputOtp placeholder'
       },
@@ -101,7 +101,7 @@ export class App {
       key: 'input',
       type: 'input',
       className: 'col-12',
-      templateOptions: {
+      props: {
         label: 'Input',
         placeholder: 'Input placeholder'
       },
@@ -110,7 +110,7 @@ export class App {
       key: 'inputtext',
       type: 'inputtext',
       className: 'col-12',
-      templateOptions: {
+      props: {
         label: 'InputText',
         placeholder: 'InputText placeholder',
       },
@@ -119,7 +119,7 @@ export class App {
       key: 'knob',
       type: 'knob',
       className: 'col-12',
-      templateOptions: {
+      props: {
         label: 'Knob',
         placeholder: 'Knob placeholder',
       },
@@ -128,7 +128,7 @@ export class App {
       key: 'listbox',
       type: 'listbox',
       className: 'col-12',
-      templateOptions: {
+      props: {
         label: 'Listbox',
         placeholder: 'Listbox placeholder',
       },
@@ -137,7 +137,7 @@ export class App {
       key: 'multiselect',
       type: 'multiselect',
       className: 'col-12',
-      templateOptions: {
+      props: {
         label: 'MultiSelect',
         placeholder: 'MultiSelect placeholder',
       },
@@ -146,7 +146,7 @@ export class App {
       key: 'password',
       type: 'password',
       className: 'col-12',
-      templateOptions: {
+      props: {
         label: 'Password',
         placeholder: 'Password placeholder',
       },
@@ -155,7 +155,7 @@ export class App {
       key: 'radiobutton',
       type: 'radiobutton',
       className: 'col-12',
-      templateOptions: {
+      props: {
         label: 'Radio',
         options: [
           { label: 'Option 1', value: '1' },
@@ -167,7 +167,7 @@ export class App {
       key: 'rating',
       type: 'rating',
       className: 'col-12',
-      templateOptions: {
+      props: {
         label: 'Rating',
         placeholder: 'Rating placeholder',
       },
@@ -176,7 +176,7 @@ export class App {
       key: 'select',
       type: 'select',
       className: 'col-2',
-      templateOptions: {
+      props: {
         label: 'Select',
         placeholder: 'Select placeholder',
         required: true,
@@ -191,7 +191,7 @@ export class App {
       key: 'selectbutton',
       type: 'selectbutton',
       className: 'col-2',
-      templateOptions: {
+      props: {
         label: 'SelectButton',
         placeholder: 'SelectButton placeholder',
         required: true,
@@ -206,7 +206,7 @@ export class App {
       key: 'slider',
       type: 'slider',
       className: 'col-12',
-      templateOptions: {
+      props: {
         label: 'Slider',
         placeholder: 'Slider placeholder'
       },
@@ -215,7 +215,7 @@ export class App {
       key: 'textarea',
       type: 'textarea',
       className: 'col-12',
-      templateOptions: {
+      props: {
         label: 'TextArea',
         placeholder: 'Textarea placeholder',
       },
@@ -224,7 +224,7 @@ export class App {
       key: 'togglebutton',
       type: 'togglebutton',
       className: 'col-12',
-      templateOptions: {
+      props: {
         label: 'ToggleButton',
         placeholder: 'ToggleButton placeholder',
       },
@@ -233,7 +233,7 @@ export class App {
       key: 'toggleswitch',
       type: 'toggleswitch',
       className: 'col-12',
-      templateOptions: {
+      props: {
         label: 'ToggleSwitch',
         placeholder: 'ToggleSwitch placeholder',
       },

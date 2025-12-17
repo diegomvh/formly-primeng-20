@@ -14,26 +14,24 @@ export interface FormlyFieldProps extends CoreFormlyFieldProps {
   selector: 'formly-wrapper-primeng-field',
   imports: [CommonModule, ReactiveFormsModule, FormlyModule],
   template: `
-    <div class="flex flex-col">
-      @if (props.label && !props.hideLabel) {
-      <label [for]="id">
-        {{ props.label }}
-        @if (props.required && !props.hideRequiredMarker) {
-          <span aria-hidden="true">*</span>
-        }
-      </label>
+    @if (props.label && !props.hideLabel) {
+    <label [for]="id">
+      {{ props.label }}
+      @if (props.required && !props.hideRequiredMarker) {
+        <span aria-hidden="true">*</span>
       }
-      <ng-container #fieldComponent></ng-container>
-      @if (props.helpText && !props.hideHelpText) {
-        <small>{{props.helpText}}</small>
-      }
+    </label>
+    }
+    <ng-container #fieldComponent></ng-container>
+    @if (props.helpText && !props.hideHelpText) {
+      <small>{{props.helpText}}</small>
+    }
 
-      @if (showError) {
-        <small>
-          <formly-validation-message [field]="field"></formly-validation-message>
-        </small>
-      }
-    </div>
+    @if (showError) {
+      <small>
+        <formly-validation-message [field]="field"></formly-validation-message>
+      </small>
+    }
   `,
 })
 export class FormlyFieldWrapper extends FieldWrapper<FormlyFieldConfig<FormlyFieldProps>> {}

@@ -16,6 +16,7 @@ export interface FormlyInputMaskFieldConfig extends FormlyFieldConfig<InputMaskP
   imports: [CommonModule, ReactiveFormsModule, FormlyModule, InputMaskModule],
   template: `
     <p-inputmask
+      [inputId]="id"
       [formControl]="formControl"
       [formlyAttributes]="field"
     ></p-inputmask>
