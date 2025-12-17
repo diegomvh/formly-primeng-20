@@ -1,4 +1,7 @@
-import { withFormlyFormField } from './field';
+import { withFormlyField } from './field';
+import { withFormlyFieldWrapperObject } from './object';
+import { withFormlyFieldWrapperArray } from './array';
+
 import { withFormlyFieldInputText } from './inputtext';
 import { withFormlyFieldInputNumber } from './inputnumber';
 import { withFormlyFieldTextArea } from './textarea';
@@ -27,7 +30,9 @@ export function withFormlyPrimeNG() {
   return [
     withFormlyFieldAutoComplete(),
     withFormlyFieldCascadeSelect(),
-    withFormlyFormField(),
+    withFormlyField(),
+    withFormlyFieldWrapperObject(),
+    withFormlyFieldWrapperArray(),
     withFormlyFieldInputText(),
     withFormlyFieldInputNumber(),
     withFormlyFieldInputOtp(),

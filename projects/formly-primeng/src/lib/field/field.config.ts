@@ -1,7 +1,7 @@
 import { ConfigOption } from '@ngx-formly/core';
 import { FormlyFieldWrapper } from './field.wrapper';
 
-export function withFormlyFormField(): ConfigOption {
+export function withFormlyField(): ConfigOption {
   return {
     wrappers: [
       {
